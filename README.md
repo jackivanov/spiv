@@ -1,6 +1,6 @@
 # Spiv Proxy
 
-Spiv Proxy is a set of Terraform scripts that simplify the setup of a personal Socks5 Proxy.
+Spiv Proxy is a set of [Terraform](https://www.terraform.io/) scripts that simplify the setup of a personal Socks5 Proxy.
 
 ## Deploy the Spiv Server
 
