@@ -4,11 +4,11 @@ Spiv Proxy is a set of Terraform scripts that simplify the setup of a personal S
 
 ## Deploy the Spiv Server
 
-The easiest way to get an Spiv server running is to let it set up a _new_ virtual machine in the cloud for you.
+The easiest way to get a Spiv server running is to let it set up a _new_ virtual machine in the cloud for you.
 
-1. **Setup an account on a cloud hosting provider.** Algo supports [DigitalOcean](https://m.do.co/c/c97551d0c3d6)
+1. **Setup an account on a cloud hosting provider.** Spiv supports [DigitalOcean](https://m.do.co/c/c97551d0c3d6)
 
-2. **[Download Algo](https://github.com/jackivanov/spiv/archive/master.zip).** Unzip it in a convenient location on your local machine.
+2. **[Download Spiv](https://github.com/jackivanov/spiv/archive/master.zip).** Unzip it in a convenient location on your local machine.
 
 3. **Install Terraform.**
 
