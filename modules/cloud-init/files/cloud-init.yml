@@ -1,0 +1,31 @@
+#cloud-config
+package_upgrade: true
+
+packages:
+  - dante-server
+
+users:
+  - default
+
+write_files:
+  - path: /etc/danted.conf
+    content: |
+      logoutput: stderr
+      internal: 0.0.0.0 port = 443
+      external: eth0
+      socksmethod: pam.username
+      user.privileged: root
+      user.notprivileged: nobody
+      user.libwrap: nobody
+      client pass {
+        from: 0/0 to: 0/0
+      }
+      socks pass {
+        from: 0/0 to: 0/0
+        pamservicename: ssh
+      }
+
+runcmd:
+  - echo "${users}" | tr "," "\n" | while read i; do USER="$${i%:*}"; PASS="$${i##*:}"; useradd $$USER; echo "$${i}" | chpasswd; done
+
+output: {all: '| tee -a /var/log/cloud-init-output.log'}
