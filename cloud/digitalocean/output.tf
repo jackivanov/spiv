@@ -1,5 +1,5 @@
 output socks5 {
-  value = "${module.cloud-digitalocean.server_address}:${var.socks_port}"
+  value = "${module.cloud-digitalocean.server_address}:443"
 }
 
 output users {
